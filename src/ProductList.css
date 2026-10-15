@@ -40,6 +40,17 @@ body {
 }
 
 /* Product Grid */
+.category-title {
+    color: white;
+    background-color: #4CAF50;
+    font-weight: bold;
+    font-size: 30px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    justify-content: space-between;
+    padding: 15px;
+}
+
 .product-grid {
     display:flex;
     flex-direction: column;
