@@ -8,7 +8,7 @@ function ProductList({ onHomeClick }) {
     const [showPlants, setShowPlants] = useState(false); // State to control the visibility of the About Us page
     const [addedToCart, setAddedToCart] = useState({});
     const cart = useSelector(state => state.cart.items);
-    const dispatch = useDispatch();    
+    const dispatch = useDispatch();
 
     const plantsArray = [
         {
@@ -260,7 +260,6 @@ function ProductList({ onHomeClick }) {
 
     const handleAddToCart = (plant) => {
         dispatch(addItem(plant)); // Dispatch the action to add the product to the cart (Redux action)
-
         setAddedToCart((prevState) => ({ // Update the local state to reflect that the product has been added
             ...prevState, // Spread the previous state to retain existing entries
             [plant.name]: true, // Set the current product's name as a key with value 'true' to mark it as added
@@ -300,7 +299,7 @@ function ProductList({ onHomeClick }) {
                                         <div>{plant.description}</div>
                                         <div className="product-price">{plant.cost}</div>
                                         <button className="product-button" onClick={() => handleAddToCart(plant)}>
-                                        Add to Cart
+                                            {addedToCart[plant.name] ? 'Added to Cart' : 'Add to Cart'}
                                         </button>
                                     </div>
                                 ))}
