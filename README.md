@@ -1,2 +1,3 @@
 # e-plant shopping site
-https://github.com/florinajugrastan-source/e-plantShopping
+# Florina Jugrastan
+https://github.com/florinajugrastan/e-plantShopping
